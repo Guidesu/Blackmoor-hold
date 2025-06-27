@@ -374,8 +374,10 @@
 					user.visible_message(span_notice("[user] finds [B] in [src]."))
 					return
 			user.visible_message(span_warning("[user] searches through [src]."))
-			if(looty.len && do_after(L, CLICK_CD_MELEE))
-				attack_hand(user)
+#ifdef MATURESERVER
+			if(!looty.len)
+				to_chat(user, span_warning("Picked clean."))
+#else
 			if(!looty.len)
 				to_chat(user, span_warning("Picked clean... I should try later."))
 #endif
