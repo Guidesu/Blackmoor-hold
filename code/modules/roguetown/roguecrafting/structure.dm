@@ -803,3 +803,11 @@
 	verbage = "constructs"
 	craftsound = 'sound/foley/Building-01.ogg'
 	ontile = TRUE
+/datum/crafting_recipe/roguetown/structure/wicker
+	name = "wicker basket"
+	result = /obj/structure/closet/crate/chest/wicker
+	reqs = list(/obj/item/grown/log/tree/stick = 4,
+				/obj/item/natural/fibers = 3)
+	verbage_simple = "weave"
+	verbage = "weaves"
+	craftdiff = 0
