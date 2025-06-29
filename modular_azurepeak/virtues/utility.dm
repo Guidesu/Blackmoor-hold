@@ -28,11 +28,16 @@
 	desc = "Some terrible incident colours my past, and now, I feel nothing."
 	added_traits = list(TRAIT_NOMOOD)
 
-/datum/virtue/utility/light_steps
-	name = "Light Steps"
-	desc = "Years of skulking about have left my steps quiet, and my hunched gait quicker."
-	added_traits = list(TRAIT_LIGHT_STEP)
-	added_skills = list(list(/datum/skill/misc/sneaking, 3, 6))
+/datum/virtue/utility/stealthy
+	name = "Stealthy"
+	desc = "You move with quiet, nimble steps, have a knack for locks, and your ears are keen to whispers and distant sounds."
+	added_traits = list(TRAIT_LIGHT_STEP, TRAIT_KEENEARS)
+	added_skills = list(
+		list(/datum/skill/misc/sneaking, 3, 6),
+		list(/datum/skill/misc/lockpicking, 3, 6)
+	)
+	added_stashed_items = list("Lockpick Ring" = /obj/item/lockpickring/mundane)
+	custom_text = "Combines the benefits of Light Steps, Larcenous, and Keen Ears. You move quietly, can pick locks, and can identify known people who speak even when out of sight. You can hear people speaking above and below you, and whispers from one tile further."
 
 /datum/virtue/utility/resident
 	name = "Resident"
@@ -230,12 +235,6 @@
 		var/instrument_type = instruments[chosen_name]
 		recipient.mind?.special_items[chosen_name] = instrument_type
 
-/datum/virtue/utility/larcenous
-	name = "Larcenous"
-	desc = "Whether it was asked of you, or by a calling for the rush deep within your hollow heart, you seek things that don't belong you. You know how to work a lock, and have stashed a ring of them, for just the occasion."
-	added_stashed_items = list("Lockpick Ring" = /obj/item/lockpickring/mundane)
-	added_skills = list(list(/datum/skill/misc/lockpicking, 3, 6))
-
 /datum/virtue/utility/woodsman
 	name = "Woodsman"
 	desc = "You have spent your life in and around the wilds, learning to hunt, track, cook, and survive off the land. You are skilled at moving quietly, finding food, and making use of the forest's bounty."
@@ -288,12 +287,6 @@
 /datum/virtue/utility/secondvoice/apply_to_human(mob/living/carbon/human/recipient)
 	recipient.verbs += /mob/living/carbon/human/proc/changevoice
 	recipient.verbs += /mob/living/carbon/human/proc/swapvoice
-
-/datum/virtue/utility/keenears
-	name = "Keen Ears"
-	desc = "Cowering from authorities, loved ones or by a generous gift of the gods, you've adapted a keen sense of hearing, and can identify the speakers even when they are out of sight, their whispers ringing louder."
-	added_traits = list(TRAIT_KEENEARS)
-	custom_text = "You can identify known people who speak even when they are out of sight. You can hear people speaking normally above and below you, regardless of obstacles in the way. You can hear whispers from one tile further."
 
 /datum/virtue/utility/bronzearm_r
 	name = "Bronze Arm (R)"
