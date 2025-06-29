@@ -33,8 +33,8 @@
 	desc = "You move with quiet, nimble steps, have a knack for locks, and your ears are keen to whispers and distant sounds."
 	added_traits = list(TRAIT_LIGHT_STEP, TRAIT_KEENEARS)
 	added_skills = list(
-		list(/datum/skill/misc/sneaking, 3, 6),
-		list(/datum/skill/misc/lockpicking, 3, 6)
+		list(/datum/skill/misc/sneaking, 3, 4),
+		list(/datum/skill/misc/lockpicking, 3, 4)
 	)
 	added_stashed_items = list("Lockpick Ring" = /obj/item/lockpickring/mundane)
 	custom_text = "Combines the benefits of Light Steps, Larcenous, and Keen Ears. You move quietly, can pick locks, and can identify known people who speak even when out of sight. You can hear people speaking above and below you, and whispers from one tile further."
@@ -240,8 +240,8 @@
 	desc = "You have spent your life in and around the wilds, learning to hunt, track, cook, and survive off the land. You are skilled at moving quietly, finding food, and making use of the forest's bounty."
 	added_traits = list(TRAIT_SLEUTH, TRAIT_WOODWALKER, TRAIT_OUTDOORSMAN)
 	added_skills = list(
-		list(/datum/skill/craft/cooking, 3, 6),
-		list(/datum/skill/labor/fishing, 2, 6),
+		list(/datum/skill/craft/cooking, 3, 3),
+		list(/datum/skill/labor/fishing, 2, 2),
 		list(/datum/skill/craft/traps, 2, 2),
 		list(/datum/skill/labor/butchering, 2, 2),
 		list(/datum/skill/misc/sewing, 2, 2),
@@ -250,7 +250,6 @@
 		list(/datum/skill/misc/athletics, 2, 2),
 		list(/datum/skill/labor/farming, 2, 2),
 		list(/datum/skill/labor/lumberjacking, 2, 2),
-		list(/datum/skill/misc/sneaking, 3, 6)
 	)
 	added_stashed_items = list(
 		"Bag of Food" = /obj/item/storage/roguebag/food,
